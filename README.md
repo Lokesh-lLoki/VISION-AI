@@ -21,7 +21,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Open http://127.0.0.1:5000
+Open https://vision-ai-3idd.onrender.com/
 
 If PowerShell blocks activation, run:
 ```powershell
