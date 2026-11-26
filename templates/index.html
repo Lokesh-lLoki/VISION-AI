@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <title>VISION AI — Personal Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Vision AI home">
+        <span class="brand-mark">V</span>
+        <span>VISION<span class="brand-light"> AI</span></span>
+      </a>
+      <div class="status"><span class="status-dot"></span><span id="statusText">SYSTEM ONLINE</span></div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">YOUR PERSONAL DIGITAL ASSISTANT</p>
+      <h1>See beyond.<br><span>Think smarter.</span></h1>
+      <p class="subheading">A simple voice-powered assistant, ready when you are.</p>
+    </section>
+
+    <section class="assistant-panel" aria-label="Vision AI assistant">
+      <div class="orb-wrap" id="orbWrap">
+        <div class="orb-ring ring-one"></div>
+        <div class="orb-ring ring-two"></div>
+        <div class="orb-core"><div class="orb-shine"></div><span>V</span></div>
+        <div class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <p class="assistant-state" id="assistantState">VISION AI IS READY</p>
+      <p class="assistant-hint" id="assistantHint">Tap the microphone or type a command below.</p>
+      <button class="mic-button" id="micButton" type="button" aria-label="Start voice recognition">
+        <span class="mic-symbol">🎙</span><span id="micLabel">START LISTENING</span>
+      </button>
+      <p class="mic-note" id="micNote">Microphone access is requested by your browser.</p>
+    </section>
+
+    <section class="chat-panel">
+      <div class="section-heading"><div><p class="eyebrow">INTERACTION</p><h2>Talk to Vision</h2></div><button class="clear-button" id="clearButton" type="button">Clear chat</button></div>
+      <div class="messages" id="messages" aria-live="polite">
+        <div class="message assistant-message"><span class="message-tag">VISION AI</span><p>Hello! I'm Vision AI. Try “open YouTube”, “tell me a joke”, or “what is machine learning?”</p></div>
+      </div>
+      <form class="composer" id="chatForm">
+        <input id="messageInput" type="text" placeholder="Type a command..." autocomplete="off" aria-label="Type a command">
+        <button type="submit">SEND <span>↗</span></button>
+      </form>
+    </section>
+
+    <section class="commands">
+      <p class="eyebrow">TRY A COMMAND</p>
+      <div class="command-chips">
+        <button type="button" data-command="What time is it?">◷ &nbsp;What time is it?</button>
+        <button type="button" data-command="Tell me a joke">✧ &nbsp;Tell me a joke</button>
+        <button type="button" data-command="Open YouTube">▶ &nbsp;Open YouTube</button>
+        <button type="button" data-command="What is artificial intelligence?">⌕ &nbsp;What is AI?</button>
+      </div>
+    </section>
+    <footer>VISION AI <span>•</span> BUILT WITH PYTHON & WEB TECHNOLOGIES</footer>
+  </main>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
